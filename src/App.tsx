@@ -5,6 +5,12 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import cvPdf from './CV_Hyunsoo-Lee.pdf';
+import picture1 from './pic/Picture1.png';
+import picture2 from './pic/Picture2.png';
+import figure3 from './pic/Figure_3.jpg';
+import sec3LcvcoFlow from './pic/Sec3_LCVCO_FLOW_v3.jpg';
+import cardPhoto from './pic/card_photo_HS_Lee.JPG';
 import { 
   Mail, 
   Linkedin, 
@@ -112,7 +118,7 @@ const CV_DATA = {
     {
       title: "Autonomous Hardware Vulnerability Detection in PCI Express",
       subtitle: "Hardware Fuzzing in PCIe",
-      image: "/src/pic/Picture2.png",
+      image: picture2,
       tag: "Hardware Security"
     },
     {
@@ -123,19 +129,19 @@ const CV_DATA = {
     {
       title: "Designing LC-VCO Automation/Optimization Framework",
       subtitle: "Reinforcement Learning & Layout Automation",
-      image: "/src/pic/Sec3_LCVCO_FLOW_v3.jpg",
+      image: sec3LcvcoFlow,
       tag: "VLSI CAD"
     },
     {
       title: "AES-128 Hardware Trojan ASIC Tape-out",
       subtitle: "Tape-out & Security Analysis",
-      image: "/src/pic/Picture1.png",
+      image: picture1,
       tag: "Hardware Security"
     },
     {
       title: "Backside Power Delivery Network (BSPDN) Optimization",
       subtitle: "Reinforcement Learning for IR-drop Reduction",
-      image: "/src/pic/Figure_3.jpg",
+      image: figure3,
       tag: "VLSI CAD"
     }
   ],
@@ -240,7 +246,7 @@ export default function App() {
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
-                <a href="/src/CV_Hyunsoo-Lee.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
+                <a href={cvPdf} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
                   <FileText className="w-4 h-4" />
                   Download CV
                 </a>
@@ -248,7 +254,7 @@ export default function App() {
             </div>
             <div className="shrink-0 w-48 aspect-[3/4] md:w-64 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
               <img 
-                src="/src/pic/card_photo_HS_Lee.JPG" 
+                src={cardPhoto} 
                 alt="Hyunsoo Lee" 
                 className="w-full h-full object-cover"
               />
@@ -353,12 +359,14 @@ export default function App() {
                   className="space-y-6 group cursor-pointer"
                 >
                   <div className="card-image">
-                    <img 
-                      src={project.image} 
-                      alt={project.title}
-                      className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
-                      referrerPolicy="no-referrer"
-                    />
+                    {project.image && (
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-4"
+                        referrerPolicy="no-referrer"
+                      />
+                    )}
                     <div className="absolute bottom-6 left-6 p-3 bg-white/90 backdrop-blur rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                       <ArrowUpRight className="w-5 h-5" />
                     </div>
