@@ -5,12 +5,6 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import cvPdf from './CV_Hyunsoo-Lee.pdf';
-import picture1 from './pic/Picture1.png';
-import picture2 from './pic/Picture2.png';
-import figure3 from './pic/Figure_3.jpg';
-import sec3LcvcoFlow from './pic/Sec3_LCVCO_FLOW_v3.jpg';
-import cardPhoto from './pic/card_photo_HS_Lee.JPG';
 import { 
   Mail, 
   Linkedin, 
@@ -21,6 +15,8 @@ import {
   Briefcase,
   FileText
 } from 'lucide-react';
+
+const ASSET_BASE = import.meta.env.BASE_URL;
 
 // --- Data ---
 const CV_DATA = {
@@ -118,7 +114,7 @@ const CV_DATA = {
     {
       title: "Autonomous Hardware Vulnerability Detection in PCI Express",
       subtitle: "Hardware Fuzzing in PCIe",
-      image: picture2,
+      image: `${ASSET_BASE}pic/Picture2.png`,
       tag: "Hardware Security"
     },
     {
@@ -129,19 +125,19 @@ const CV_DATA = {
     {
       title: "Designing LC-VCO Automation/Optimization Framework",
       subtitle: "Reinforcement Learning & Layout Automation",
-      image: sec3LcvcoFlow,
+      image: `${ASSET_BASE}pic/Sec3_LCVCO_FLOW_v3.jpg`,
       tag: "VLSI CAD"
     },
     {
       title: "AES-128 Hardware Trojan ASIC Tape-out",
       subtitle: "Tape-out & Security Analysis",
-      image: picture1,
+      image: `${ASSET_BASE}pic/Picture1.png`,
       tag: "Hardware Security"
     },
     {
       title: "Backside Power Delivery Network (BSPDN) Optimization",
       subtitle: "Reinforcement Learning for IR-drop Reduction",
-      image: figure3,
+      image: `${ASSET_BASE}pic/Figure_3.jpg`,
       tag: "VLSI CAD"
     }
   ],
@@ -246,7 +242,7 @@ export default function App() {
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
-                <a href={cvPdf} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
+                <a href={`${ASSET_BASE}CV_Hyunsoo-Lee.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
                   <FileText className="w-4 h-4" />
                   Download CV
                 </a>
@@ -254,7 +250,7 @@ export default function App() {
             </div>
             <div className="shrink-0 w-48 aspect-[3/4] md:w-64 rounded-2xl overflow-hidden border border-black/5 shadow-sm">
               <img 
-                src={cardPhoto} 
+                src={`${ASSET_BASE}pic/card_photo_HS_Lee.JPG`} 
                 alt="Hyunsoo Lee" 
                 className="w-full h-full object-cover"
               />
