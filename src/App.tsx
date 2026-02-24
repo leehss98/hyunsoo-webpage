@@ -26,7 +26,7 @@ const CV_DATA = {
   contact: {
     phone: "979-344-1720",
     email: "leehss98@tamu.edu",
-    linkedin: "www.linkedin.com/in/hyunsoo-lee-451a66334",
+    linkedin: "https://www.linkedin.com/in/hyunsoo-lee-451a66334",
   },
   researchInterests: [
     {
@@ -242,7 +242,7 @@ export default function App() {
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
                 </a>
-                <a href={`${ASSET_BASE}CV_Hyunsoo-Lee.pdf`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
+                <a href={`${ASSET_BASE}CV_Hyunsoo-Lee.pdf`} download="CV_Hyunsoo-Lee.pdf" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-ink/70 hover:text-ink transition-colors font-medium">
                   <FileText className="w-4 h-4" />
                   Download CV
                 </a>
