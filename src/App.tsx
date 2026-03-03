@@ -269,7 +269,7 @@ export default function App() {
                   Current Status
                 </p>
                 <p className="text-lg md:text-xl font-medium leading-relaxed">
-                  I am currently seeking a <span className="text-ink font-bold underline decoration-black/20 underline-offset-4">hardware verification internship</span> in the U.S. I am in F-1 student status and can be authorized to work through Curricular Practical Training (CPT) for an internship.
+                  I am currently seeking a <span className="text-ink font-bold underline decoration-black/20 underline-offset-4">summer internship</span> in the U.S. I am in F-1 student status and can be authorized to work through Curricular Practical Training (CPT) for an internship.
                 </p>
               </div>
             </div>
